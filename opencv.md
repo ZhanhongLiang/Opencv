@@ -72,7 +72,7 @@ STEP6：提取检测结果所蕴含的信息
 
 灰度图像由一个二维灰度（或亮度）的函数f(x,y)组成。在定义为f(x,y)的二维函数中，x,y是空间坐标，f(x,y)是点（x,y）的幅值。
 
-彩色图像由三个（如RGB,HSV）二维灰度（或亮度）函数f(x,y)组成。![](C:\Users\25212\Desktop\WeChat Image_20190726144746.jpg)
+彩色图像由三个（如RGB,HSV）二维灰度（或亮度）函数f(x,y)组成。![](https://github.com/ZhanhongLiang/Opencv/blob/master/img/1.jpg)
 
 
 
@@ -82,21 +82,23 @@ STEP6：提取检测结果所蕴含的信息
 
 对于单色（灰度）图像而言，每个像素的亮度用一个数值来表示，通常数值范围在0到255之间，0表示黑、255表示白，其它值表示处于黑白之间的灰度。
 
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/1.jpg)
+
 彩色图像可以用红、绿、蓝三元组的二维矩阵来表示。
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726144903.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/3.jpg)
 
 1-2数字图像质量
 
 **图像采样**
 
-空间坐标(x,y)的数字化被称为图像采样。采样即确定水平和垂直方向上的像素个数N、M。![](C:\Users\25212\Desktop\WeChat Image_20190726145142.jpg)
+空间坐标(x,y)的数字化被称为图像采样。采样即确定水平和垂直方向上的像素个数N、M。![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/3.jpg)
 
 **图像量化**
 
 函数取值的数字化被称为图像的量化，如量化到256个灰度级。
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726145250.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/2.jpg)
 
 **图像的质量：层次**
 
@@ -110,7 +112,7 @@ STEP6：提取检测结果所蕴含的信息
 
 图像数据的实际层次越多，视觉效果就越好。
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726145356.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/4.jpg)
 
 **图像的质量：对比度**
 
@@ -118,31 +120,31 @@ STEP6：提取检测结果所蕴含的信息
 
 对比度 = 最大亮度 / 最小亮度
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726145451.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/5.jpg)
 
 图像的质量：清晰度
 
 与清晰度相关的主要因素：亮度、对比度、颜色饱和度、尺寸大小、细微层次 
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726145536.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/6.jpg)
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726145543.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/7.jpg)
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726145551.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/8.jpg)
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726145559.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/9.jpg)
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726145606.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/10.jpg)
 
 **STEP 2：滤波处理**
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726145740.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/11.jpg)
 
 2-1均值滤波
 
 **算术均值滤波**
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726145834.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/12.jpg)
 
 Sxy表示中心在(x,y)，尺寸为m×n的矩形窗口平滑了一幅图像的局部变化，在模糊了结果的同时减少了噪声。
 
@@ -150,17 +152,17 @@ Sxy表示中心在(x,y)，尺寸为m×n的矩形窗口平滑了一幅图像的�
 
 
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726145942.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/13.jpg)
 
 几何均值滤波器所达到的平滑度可以与算术均值滤波器相比，但几何均值滤波器在滤波过程中，与算术均值滤波器相比，会丢失更少的图像细节——相对锐化。
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726150014.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/14.jpg)
 
 算术均值滤波器和几何均值滤波器适合于处理高斯或均匀等随机噪声，缺点是必须事先知道噪声是暗噪声还是亮噪声，以便于选择合适的Q符号。
 
 **2-2中值滤波**
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726150058.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/15.jpg)
 
 在相同尺寸下，比起均值滤波器引起的模糊少，对单极或双极脉冲噪声非常有效。
 
@@ -240,7 +242,7 @@ Sxy表示中心在(x,y)，尺寸为m×n的矩形窗口平滑了一幅图像的�
 
 该方法相对前面两种方法而言稍微精准一点点。结果也更让人可以接受。
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726150755.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/16.jpg)
 
 **STEP 4形态学操作**
 
@@ -254,7 +256,7 @@ Sxy表示中心在(x,y)，尺寸为m×n的矩形窗口平滑了一幅图像的�
 
 **4-2集合论逻辑运算**
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726151200.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/17.jpg)
 
 从左到右，从上到下的运算为：补集运算、并集运算、交集运算、差集运算
 
@@ -286,7 +288,7 @@ Sxy表示中心在(x,y)，尺寸为m×n的矩形窗口平滑了一幅图像的�
 
 ![img](https://mmbiz.qpic.cn/mmbiz_png/XKibCyd3WnNN38JlYp1N5NOianKickChic8x3a92yzQz6w77oVB6ic7kyMpJmLVSEj9ibFnN2jZezicbjiagNnBK23ibBAA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726151518.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/18.jpg)
 
 图中左边是被处理的图象X（二值图象，我们针对的是图中的**黑点**），中间是结构元素B，那个标有origin 的点是**中心点**，即当前处理元素的位置。
 
@@ -294,7 +296,7 @@ Sxy表示中心在(x,y)，尺寸为m×n的矩形窗口平滑了一幅图像的�
 
  图中右边是腐蚀后的结果。可以看出，它仍在原来X的范围内，且比X包含的点要少，就像X被腐蚀掉了一圈。
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726151556.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/19.jpg)
 
 **3）膨胀**
 
@@ -324,7 +326,7 @@ Sxy表示中心在(x,y)，尺寸为m×n的矩形窗口平滑了一幅图像的�
 
 上式表示B的反射进行平移，与A的交集是A的子集。
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726151646.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/20.jpg)
 
 图中左边是被处理的图象X（二值图象，我们针对的是图中的**黑点**），中间是结构元素B，那个标有origin的点是中心点，即当前处理元素的位置。。
 
@@ -332,7 +334,7 @@ Sxy表示中心在(x,y)，尺寸为m×n的矩形窗口平滑了一幅图像的�
 
 图中右边是膨胀后的结果。可以看出，它包括X的所有范围，就象X膨胀了一圈。
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726151723.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/21.jpg)
 
 膨胀的应用：**桥接文字裂缝**
 
@@ -364,7 +366,7 @@ Sxy表示中心在(x,y)，尺寸为m×n的矩形窗口平滑了一幅图像的�
 
 让我们来看看实际上是如何进行开运算的。
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726151828.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/22.jpg)
 
  开运算
 
@@ -372,9 +374,11 @@ Sxy表示中心在(x,y)，尺寸为m×n的矩形窗口平滑了一幅图像的�
 
 下图是开运算的几何解释。左边灰色圆B对三角形A腐蚀，虚线为腐蚀过程中Ba的路径；中间黑色实线为膨胀过程Ba的路径；右边灰色区域为膨胀结果。
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726151901.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/23.jpg)
 
-开运算实例：![](C:\Users\25212\Desktop\WeChat Image_20190726151936.jpg)
+下图是一个二值图像的开运算实例。
+
+![img](https://mmbiz.qpic.cn/mmbiz_jpg/XKibCyd3WnNN38JlYp1N5NOianKickChic8xTXEpXvgJLF8j6xy5KKuTgTibwceUmY0Zz0PKgGhw9IKnRO4D6EAAZhA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 **2）闭运算**
 
@@ -386,13 +390,13 @@ Sxy表示中心在(x,y)，尺寸为m×n的矩形窗口平滑了一幅图像的�
 
 上式含义：先用B对A膨胀，然后用B对结果腐蚀。
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726152008.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/24.jpg)
 
 图中上面的两幅图中，左边是被处理的图象X(二值图象，我们针对的是黑点)，右边是结构元素B；下面的两幅图中左边是膨胀后的结果，右边是在此基础上腐蚀的结果。可以看到，**原图经过闭运算后，断裂的地方被弥合了**。
 
  下面是闭运算的几何解释。左边灰色圆B对V形槽A膨胀；中间图的实线为膨胀过程中Ba的路径；右边灰色区域为腐蚀结果。
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726152046.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/25.jpg)
 
 **3）开运算和闭运算的关系**
 
@@ -430,7 +434,7 @@ Sxy表示中心在(x,y)，尺寸为m×n的矩形窗口平滑了一幅图像的�
 
 ● 图像f(x,y)在位置(x,y)的梯度定义为下列向量
 
-![](C:\Users\25212\Desktop\WeChat Image_20190726152530.jpg)
+![](https://raw.githubusercontent.com/ZhanhongLiang/Opencv/master/img/26.jpg)
 
 霍夫变换-直线检测
 
